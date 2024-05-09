@@ -9,7 +9,7 @@ pub fn component(
   a(
     [
       class(
-        "inline-block dark:decoration-fuchsia-300 underline underline-offset-4 decoration-2 hover:decoration-4 focus:outline-none focus:decoration-4",
+        "inline-block dark:decoration-gleam-pink underline underline-offset-4 decoration-2 hover:decoration-4 focus:outline-none focus:decoration-4",
       ),
       ..attrs
     ],

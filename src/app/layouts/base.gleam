@@ -27,7 +27,7 @@ pub fn layout(props: Props, make: fn() -> List(Element(msg))) -> Element(msg) {
     body(
       [
         class(
-          "bg-fuchsia-50 dark:bg-neutral-900 dark:text-fuchsia-50 max-w-5xl p-4 mx-auto",
+          "bg-gleam-pink/10 text-gleam-black dark:bg-gleam-blacker dark:text-gleam-white max-w-5xl p-4 mx-auto",
         ),
       ],
       [header(), main([class("mt-4 md:mt-16")], make())],

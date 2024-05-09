@@ -4,6 +4,12 @@
     --font-family-sans: "Space Grotesk Variable", ui-sans-serif, system-ui,
         sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
         "Noto Color Emoji";
+
+    --color-gleam-pink: #ffaff3;
+    --color-gleam-white: #fefefc;
+    --color-gleam-black: #1e1e1e;
+    --color-gleam-blacker: #151515;
+    --color-gleam-yellow: #fffbe8;
 }
 
 @font-face {
