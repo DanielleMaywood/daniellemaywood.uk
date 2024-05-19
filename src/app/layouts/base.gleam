@@ -14,6 +14,7 @@ pub fn layout(props: Props, make: fn() -> List(Element(msg))) -> Element(msg) {
       meta([attribute("charset", "utf-8")]),
       meta([name("viewport"), attribute("content", "width=device-width")]),
       link([rel("stylesheet"), href("/" <> config.theme_path)]),
+      link([rel("me"), href(config.mastodon)]),
       link([rel("icon"), type_("image/png"), href("/images/favicon.webp")]),
       link([
         rel("preload"),
@@ -26,11 +27,12 @@ pub fn layout(props: Props, make: fn() -> List(Element(msg))) -> Element(msg) {
     ]),
     body(
       [
-        class(
-          "bg-gleam-pink/10 text-gleam-black dark:bg-gleam-blacker dark:text-gleam-white max-w-5xl p-4 mx-auto",
-        ),
+        // "bg-gleam-pink/10 text-gleam-black dark:bg-gleam-blacker dark:text-gleam-white max-w-5xl p-4 mx-auto",
+        class("text-neutral-800 bg-neutral-100"),
+        class("dark:text-neutral-200 dark:bg-neutral-950"),
+        class("max-w-5xl mx-auto px-4"),
       ],
-      [header(), main([class("mt-4 md:mt-16")], make())],
+      [header(), main([class("m-4")], make())],
     ),
   ])
 }

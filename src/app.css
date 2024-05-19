@@ -4,12 +4,8 @@
     --font-family-sans: "Space Grotesk Variable", ui-sans-serif, system-ui,
         sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
         "Noto Color Emoji";
-
-    --color-gleam-pink: #ffaff3;
-    --color-gleam-white: #fefefc;
-    --color-gleam-black: #1e1e1e;
-    --color-gleam-blacker: #151515;
-    --color-gleam-yellow: #fffbe8;
+    --font-family-mono: "iA Writer Mono", ui-monospace, SFMono-Regular, Menlo,
+        Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
 @font-face {
@@ -19,4 +15,60 @@
     font-weight: 300 700;
     src: url(/fonts/space-grotesk-latin-wght-normal.woff2)
         format("woff2-variations");
+}
+
+@font-face {
+    font-family: iA Writer Mono;
+    font-style: normal;
+    font-display: swap;
+    font-weight: 400;
+    src: url(/fonts/ia-writer-mono-latin-400-normal.woff2) format("woff2");
+}
+
+/* TODO: Maybe use tailwind's typography when v4 supports it */
+.markdown h1 {
+    font-size: var(--font-size-4xl);
+    font-weight: 600;
+}
+
+.markdown h2 {
+    font-size: var(--font-size-3xl);
+    font-weight: 600;
+}
+
+.markdown h3 {
+    font-size: var(--font-size-2xl);
+    font-weight: 600;
+}
+
+.markdown h4 {
+    font-size: var(--font-size-1xl);
+    font-weight: 600;
+}
+
+.markdown h5 {
+    font-size: var(--font-size-xl);
+    font-weight: 600;
+}
+
+.markdown h6 {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+}
+
+.markdown p {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-2);
+}
+
+.markdown pre {
+    background-color: var(--color-neutral-900);
+    color: var(--color-neutral-200);
+    padding: var(--spacing-3);
+    border-radius: var(--radius-sm);
+    margin-bottom: var(--spacing-1);
+
+    @media (prefers-color-scheme: dark) {
+        background-color: var(--color-neutral-900);
+    }
 }

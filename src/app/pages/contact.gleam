@@ -1,22 +1,11 @@
 import app/components/link.{component as link}
+import app/config.{
+  bluesky, codeberg, discord, email, github, mastodon, sourcehut,
+}
 import app/layouts/page
 import lustre/attribute.{class, href, rel}
 import lustre/element.{type Element}
 import lustre/element/html.{h1, p, text}
-
-pub const email = "mailto:danielle@themaywoods.com"
-
-pub const mastodon = "https://hachyderm.io/@thisdanielle"
-
-pub const bluesky = "https://bsky.app/profile/danielle.maywood.dev"
-
-pub const discord = "https://discordapp.com/users/662291749280153602"
-
-pub const github = "https://github.com/DanielleMaywood"
-
-pub const sourcehut = "https://sr.ht/~danielle"
-
-pub const codeberg = "https://codeberg.org/Danielle"
 
 pub fn page() -> Element(msg) {
   use <- page.layout(page.Props(title: "Danielle Maywood - Contact"))

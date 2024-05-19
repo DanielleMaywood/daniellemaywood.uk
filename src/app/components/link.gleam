@@ -8,9 +8,10 @@ pub fn component(
 ) -> Element(msg) {
   a(
     [
-      class(
-        "inline-block dark:decoration-gleam-pink underline underline-offset-4 decoration-2 hover:decoration-4 focus:outline-none focus:decoration-4",
-      ),
+      class("hover:text-pink-600 decoration-pink-600"),
+      class("dark:hover:text-pink-400 dark:decoration-pink-400"),
+      class("focus:outline-none focus:text-pink-600 dark:focus:text-pink-400"),
+      class("inline-block underline decoration-2 underline-offset-2"),
       ..attrs
     ],
     children,
