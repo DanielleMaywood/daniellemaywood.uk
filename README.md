@@ -1,4 +1,4 @@
-# maywood.dev
+# daniellemaywood.uk
 
 To install dependencies:
 
