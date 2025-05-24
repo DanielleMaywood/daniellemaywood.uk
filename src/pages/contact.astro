@@ -1,13 +1,14 @@
 ---
+import { Mountain, Circle, MessageCircle, Mail, Origami } from "@lucide/astro";
+
 import {
-    Mountain,
-    Circle,
+    Bluesky,
+    Codeberg,
+    Discord,
     Github,
-    MessageCircle,
-    Contact,
-    Mail,
-    Origami,
-} from "@lucide/astro";
+    Mastodon,
+    Sourcehut,
+} from "simple-icons-astro";
 
 import Tape from "../components/Tape.astro";
 import StickyNote from "../components/StickyNote.astro";
@@ -16,7 +17,7 @@ import LinkCard from "../components/LinkCard.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout>
+<Layout title="say hi ~ danielle">
     <StickyNote class="bg-pink-100 -rotate-1 mb-8">
         <h1 class="text-2xl text-pink-950 text-center">say hi to me!</h1>
         <Tape />
@@ -43,21 +44,21 @@ import Layout from "../layouts/Layout.astro";
 
                 <LinkCard
                     href="https://hachyderm.io/@thisdanielle"
-                    icon={Contact}
+                    icon={Mastodon}
                     item="Mastodon"
                     desc="hachyderm.io/@thisdanielle"
                 />
 
                 <LinkCard
                     href="https://bsky.app/profile/daniellemaywood.uk"
-                    icon={Origami}
+                    icon={Bluesky}
                     item="Bluesky"
                     desc="daniellemaywood.uk"
                 />
 
                 <LinkCard
                     href="https://discord.com/users/662291749280153602"
-                    icon={MessageCircle}
+                    icon={Discord}
                     item="Discord"
                     desc="this.danielle"
                 />
@@ -71,14 +72,14 @@ import Layout from "../layouts/Layout.astro";
 
                 <LinkCard
                     href="https://sr.ht/~danielle"
-                    icon={Circle}
+                    icon={Sourcehut}
                     item="SourceHut"
                     desc="~danielle"
                 />
 
                 <LinkCard
                     href="https://codeberg.org/Danielle"
-                    icon={Mountain}
+                    icon={Codeberg}
                     item="Codeberg"
                     desc="Danielle"
                 />

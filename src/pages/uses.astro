@@ -10,6 +10,7 @@ import {
     Code,
     Key,
     EarthLock,
+    Cloud,
 } from "@lucide/astro";
 
 import ItemCard from "../components/ItemCard.astro";
@@ -19,7 +20,7 @@ import Tape from "../components/Tape.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout>
+<Layout title="uses ~ danielle">
     <StickyNote class="bg-pink-100 -rotate-1 mb-8">
         <h1 class="text-3xl text-pink-950 text-center">what i use...</h1>
         <Tape />
@@ -139,7 +140,7 @@ import Layout from "../layouts/Layout.astro";
             <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
                 <ItemCard
                     class="border-green-800 bg-green-50 text-green-800"
-                    icon={Mail}
+                    icon={Cloud}
                     item="Cloudflare"
                     desc="Static site hosting"
                 />
