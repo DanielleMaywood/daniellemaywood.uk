@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+html {
+    scrollbar-gutter: stable;
+}
+
+@layer utilities {
+    .font-crayon {
+        font-family: "Indie Flower", cursive;
+    }
+
+    .bg-grid {
+        background-image:
+            linear-gradient(#e1e1e1 1px, transparent 1px),
+            linear-gradient(90deg, #e1e1e1 1px, transparent 1px);
+    }
+
+    .bg-lines {
+        background-image: linear-gradient(#f0f0f0 1px, transparent 1px);
+    }
+}

@@ -1,0 +1,14 @@
+---
+const { class: className } = Astro.props;
+---
+
+<span
+    class:list={[
+        "inline-block origin-center border px-2 py-1 rounded-full text-xs",
+        "transition-transform duration-200 ease-in-out",
+        "hover:[transform:scale(1.1)_rotate(0deg)]",
+        className,
+    ]}
+>
+    <slot />
+</span>

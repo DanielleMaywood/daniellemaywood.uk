@@ -1,0 +1,163 @@
+---
+import {
+    Laptop,
+    Server,
+    Smartphone,
+    MicIcon as Microphone,
+    Headphones,
+    Mail,
+    Terminal,
+    Code,
+    Key,
+    EarthLock,
+} from "@lucide/astro";
+
+import ItemCard from "../components/ItemCard.astro";
+import LinedPaper from "../components/LinedPaper.astro";
+import StickyNote from "../components/StickyNote.astro";
+import Tape from "../components/Tape.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+    <StickyNote class="bg-pink-100 -rotate-1 mb-8">
+        <h1 class="text-3xl text-pink-950 text-center">what i use...</h1>
+        <Tape />
+    </StickyNote>
+
+    <section class="mb-8">
+        <LinedPaper>
+            <h2
+                class:list={[
+                    "text-2xl text-purple-800 mb-4",
+                    "underline decoration-wavy decoration-purple-500 underline-offset-4",
+                ]}
+            >
+                hardware
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                <ItemCard
+                    class="border-purple-800 bg-purple-50 text-purple-800"
+                    icon={Smartphone}
+                    item="iPhone 16 Pro Max"
+                    desc="Personal Phone"
+                />
+
+                <ItemCard
+                    class="border-purple-800 bg-purple-50 text-purple-800"
+                    icon={Laptop}
+                    item={`14" M3 MacBook Pro`}
+                    desc="Personal laptop"
+                />
+
+                <ItemCard
+                    class="border-purple-800 bg-purple-50 text-purple-800"
+                    icon={Laptop}
+                    item={`14" M3 MacBook Pro`}
+                    desc="Work laptop"
+                />
+
+                <ItemCard
+                    class="border-purple-800 bg-purple-50 text-purple-800"
+                    icon={Server}
+                    item="Raspberry Pi 5"
+                    desc="Home server"
+                />
+
+                <ItemCard
+                    class="border-purple-800 bg-purple-50 text-purple-800"
+                    icon={Microphone}
+                    item="Elgato Wave Neo"
+                    desc="Microphone"
+                />
+
+                <ItemCard
+                    class="border-purple-800 bg-purple-50 text-purple-800"
+                    icon={Headphones}
+                    item="Audio-Technica ATH-M40x"
+                    desc="Headphones"
+                />
+            </div>
+        </LinedPaper>
+    </section>
+
+    <section class="mb-8">
+        <LinedPaper>
+            <h2
+                class:list={[
+                    "text-2xl text-blue-800 mb-4",
+                    "underline decoration-wavy decoration-blue-500 underline-offset-4",
+                ]}
+            >
+                software
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                <ItemCard
+                    class="border-blue-800 bg-blue-50 text-blue-800"
+                    icon={Mail}
+                    item="Apple's Mail.app"
+                    desc="Mail client"
+                />
+
+                <ItemCard
+                    class="border-blue-800 bg-blue-50 text-blue-800"
+                    icon={Terminal}
+                    item="Ghostty"
+                    desc="Terminal emulator"
+                />
+
+                <ItemCard
+                    class="border-blue-800 bg-blue-50 text-blue-800"
+                    icon={Code}
+                    item="Zed"
+                    desc="Code editor"
+                />
+
+                <ItemCard
+                    class="border-blue-800 bg-blue-50 text-blue-800"
+                    icon={Key}
+                    item="1Password"
+                    desc="Password manager"
+                />
+            </div>
+        </LinedPaper>
+    </section>
+
+    <section>
+        <LinedPaper>
+            <h2
+                class:list={[
+                    "text-2xl text-green-800 mb-4",
+                    "underline decoration-wavy decoration-green-500 underline-offset-4",
+                ]}
+            >
+                cloud
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                <ItemCard
+                    class="border-green-800 bg-green-50 text-green-800"
+                    icon={Mail}
+                    item="Cloudflare"
+                    desc="Static site hosting"
+                />
+
+                <ItemCard
+                    class="border-green-800 bg-green-50 text-green-800"
+                    icon={EarthLock}
+                    item="Porkbun"
+                    desc="Domain registrar"
+                />
+
+                <ItemCard
+                    class="border-green-800 bg-green-50 text-green-800"
+                    icon={Mail}
+                    item="Fastmail"
+                    desc="Mail server"
+                />
+            </div>
+        </LinedPaper>
+    </section>
+</Layout>

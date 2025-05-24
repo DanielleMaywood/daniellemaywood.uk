@@ -1,0 +1,21 @@
+{
+  "name": "daniellemaywood.uk",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@astrojs/sitemap": "^3.4.0",
+    "@fontsource/indie-flower": "^5.2.5",
+    "@lucide/astro": "^0.511.0",
+    "@tailwindcss/vite": "^4.1.7",
+    "astro": "^5.8.0",
+    "astro-robots-txt": "^1.0.0",
+    "tailwindcss": "^4.1.7"
+  }
+}

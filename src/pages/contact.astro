@@ -1,0 +1,88 @@
+---
+import {
+    Mountain,
+    Circle,
+    Github,
+    MessageCircle,
+    Contact,
+    Mail,
+    Origami,
+} from "@lucide/astro";
+
+import Tape from "../components/Tape.astro";
+import StickyNote from "../components/StickyNote.astro";
+import LinedPaper from "../components/LinedPaper.astro";
+import LinkCard from "../components/LinkCard.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+    <StickyNote class="bg-pink-100 -rotate-1 mb-8">
+        <h1 class="text-2xl text-pink-950 text-center">say hi to me!</h1>
+        <Tape />
+    </StickyNote>
+
+    <section class="mb-8">
+        <LinedPaper>
+            <h2
+                class:list={[
+                    "text-2xl text-purple-800 mb-4",
+                    "underline decoration-wavy decoration-purple-500 underline-offset-4",
+                ]}
+            >
+                where to find me
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                <LinkCard
+                    href="mailto:danielle@themaywoods.com"
+                    icon={Mail}
+                    item="Email"
+                    desc="danielle@themaywoods.com"
+                />
+
+                <LinkCard
+                    href="https://hachyderm.io/@thisdanielle"
+                    icon={Contact}
+                    item="Mastodon"
+                    desc="hachyderm.io/@thisdanielle"
+                />
+
+                <LinkCard
+                    href="https://bsky.app/profile/daniellemaywood.uk"
+                    icon={Origami}
+                    item="Bluesky"
+                    desc="daniellemaywood.uk"
+                />
+
+                <LinkCard
+                    href="https://discord.com/users/662291749280153602"
+                    icon={MessageCircle}
+                    item="Discord"
+                    desc="this.danielle"
+                />
+
+                <LinkCard
+                    href="https://github.com/DanielleMaywood"
+                    icon={Github}
+                    item="GitHub"
+                    desc="DanielleMaywood"
+                />
+
+                <LinkCard
+                    href="https://sr.ht/~danielle"
+                    icon={Circle}
+                    item="SourceHut"
+                    desc="~danielle"
+                />
+
+                <LinkCard
+                    href="https://codeberg.org/Danielle"
+                    icon={Mountain}
+                    item="Codeberg"
+                    desc="Danielle"
+                />
+            </div>
+        </LinedPaper>
+    </section>
+</Layout>

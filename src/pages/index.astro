@@ -1,0 +1,76 @@
+---
+import { FileText } from "@lucide/astro";
+
+import Sticker from "../components/Sticker.astro";
+import LinedPaper from "../components/LinedPaper.astro";
+import StickyNote from "../components/StickyNote.astro";
+import Layout from "../layouts/Layout.astro";
+import Polaroid from "../components/Polaroid.astro";
+---
+
+<Layout>
+    <StickyNote class="bg-yellow-50 rotate-1 mb-8">
+        <p class="text-lg text-neutral-950">
+            hi there! welcome to my little corner of the internet... hope you
+            enjoy! ✨
+        </p>
+    </StickyNote>
+
+    <section>
+        <LinedPaper>
+            <h2
+                class:list={[
+                    "text-2xl text-green-800 mb-4",
+                    "underline decoration-wavy decoration-green-500 underline-offset-4",
+                ]}
+            >
+                stuff i've built
+            </h2>
+
+            <div class="space-y-4">
+                <div class="flex items-start gap-6">
+                    <Polaroid class="p-2 pb-6 shadow-md rotate-2 shrink-0">
+                        <div
+                            class="relative h-16 w-16 bg-blue-100 flex items-center justify-center"
+                        >
+                            <FileText class="h-8 w-8 text-blue-800" />
+                        </div>
+                    </Polaroid>
+
+                    <div>
+                        <h3 class="text-xl text-neutral-950 mb-1">
+                            <a
+                                href="https://github.com/DanielleMaywood/glexer"
+                                class:list={[
+                                    "text-blue-800 hover:text-blue-600",
+                                    "underline decoration-wavy decoration-blue-500",
+                                    "inline-block origin-center transition-transform duration-200 ease-in-out hover:[transform:scale(1.1)]",
+                                ]}
+                            >
+                                glexer
+                            </a>
+                        </h3>
+
+                        <p class="text-neutral-950 text-md mb-2">
+                            Lexer for Gleam, written in Gleam!
+                        </p>
+
+                        <div class="flex items-center gap-2">
+                            <Sticker
+                                class="bg-pink-100 text-pink-950 border-pink-300 -rotate-1"
+                            >
+                                gleam
+                            </Sticker>
+
+                            <Sticker
+                                class="bg-green-100 text-green-950 border-green-300 rotate-2"
+                            >
+                                lexer
+                            </Sticker>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </LinedPaper>
+    </section>
+</Layout>
