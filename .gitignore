@@ -1,4 +1,2 @@
-.astro
+/public
 .DS_Store
-node_modules
-dist

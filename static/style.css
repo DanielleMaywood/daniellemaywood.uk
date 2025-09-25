@@ -1,0 +1,382 @@
+@import "reset.css";
+
+:root {
+    /***************************************************************************
+    *                                                                          *
+    *                                  Fonts                                   *
+    *                                                                          *
+    ***************************************************************************/
+    --font-sans:
+        Seravek, "Gill Sans Nova", Ubuntu, Calibri, "DejaVu Sans",
+        source-sans-pro, sans-serif;
+    --font-mono:
+        ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas,
+        "DejaVu Sans Mono", monospace;
+
+    /***************************************************************************
+    *                                                                          *
+    *                                 Colours                                  *
+    *                                                                          *
+    ***************************************************************************/
+    --color-neutral-50: oklch(98.5% 0 0);
+    --color-neutral-100: oklch(97% 0 0);
+    --color-neutral-200: oklch(92.2% 0 0);
+    --color-neutral-400: oklch(70.8% 0 0);
+
+    --color-cyan-50: oklch(98.4% 0.019 200.873);
+    --color-cyan-200: oklch(88.2% 0.059 254.128);
+
+    --color-blue-50: oklch(97% 0.014 254.604);
+    --color-blue-100: oklch(93.2% 0.032 255.585);
+    --color-blue-700: oklch(48.8% 0.243 264.376);
+
+    --color-yellow-50: oklch(98.7% 0.026 102.212);
+
+    --color-purple-50: oklch(97.7% 0.014 308.299);
+    --color-purple-100: oklch(94.6% 0.033 307.174);
+    --color-purple-700: oklch(49.6% 0.265 301.924);
+
+    --color-rose-200: oklch(89.2% 0.058 10.001);
+
+    --color-red-400: oklch(70.4% 0.191 22.216);
+
+    --color-white: #fff;
+    --color-black: #000;
+    --color-transparent: #0000;
+
+    /***************************************************************************
+    *                                                                          *
+    *                                  Theme                                   *
+    *                                                                          *
+    ***************************************************************************/
+    --fg: var(--color-black);
+    --bg: var(--color-neutral-50);
+    --bg-raised: var(--color-white);
+    --bg-softer-accent: var(--color-neutral-100);
+    --bg-soft-accent: var(--color-neutral-200);
+    --bg-hard-accent: var(--color-neutral-400);
+
+    --note-bg-cyan: var(--color-cyan-50);
+    --note-bg-yellow: var(--color-yellow-50);
+    --note-bg-purple: var(--color-purple-50);
+
+    --spine-red: var(--color-red-400);
+
+    --card-hover-purple: var(--color-purple-50);
+    --card-bg-purple: var(--color-purple-100);
+    --card-outline-purple: var(--color-purple-700);
+
+    --card-hover-blue: var(--color-blue-50);
+    --card-bg-blue: var(--color-blue-100);
+    --card-outline-blue: var(--color-blue-700);
+
+    --card-hover: var(--card-hover-purple);
+    --card-bg: var(--card-bg-purple);
+    --card-outline: var(--card-outline-purple);
+
+    --underline-color: var(--color-rose-200);
+
+    --max-width: 65ch;
+    --radius: 4px;
+    --space: 0.25rem;
+
+    --box-shadow: 0 4px 6px -1px #0000001a, 0 2px 4px -2px #0000001a;
+
+    --square-paper-image:
+        linear-gradient(
+            var(--bg-softer-accent) 1px,
+            var(--color-transparent) 1px
+        ),
+        linear-gradient(
+            90deg,
+            var(--bg-softer-accent) 1px,
+            var(--color-transparent) 1px
+        );
+    --square-paper-size: 20px 20px;
+
+    --lined-paper-image: linear-gradient(
+        var(--bg-softer-accent) 1px,
+        var(--color-transparent) 1px
+    );
+    --lined-paper-size: 100% 24px;
+
+    --page-paper-image: var(--square-paper-image);
+    --page-paper-size: var(--square-paper-size);
+}
+
+/*******************************************************************************
+*                                                                              *
+*                                  Properties                                  *
+*                                                                              *
+*******************************************************************************/
+
+html {
+    font-family: var(--font-sans);
+    font-weight: normal;
+
+    background-color: var(--bg);
+    color: var(--fg);
+
+    /* I prefer how this looks on Safari. */
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    min-height: 100dvh;
+    margin-inline: auto;
+
+    display: flex;
+    flex-direction: column;
+
+    background-image: var(--page-paper-image);
+    background-size: var(--page-paper-size);
+}
+
+header {
+    display: flex;
+    place-content: center;
+
+    background-color: color-mix(in oklab, var(--bg-raised) 80%, transparent);
+    padding: calc(var(--space) * 4) calc(var(--space) * 4);
+    border-block-end: 1px var(--bg-hard-accent) dashed;
+
+    nav {
+        max-width: var(--max-width);
+        width: 100%;
+
+        display: flex;
+        gap: calc(var(--space) * 3);
+        align-items: center;
+    }
+}
+
+main {
+    max-width: var(--max-width);
+    width: 100%;
+    margin-inline: auto;
+
+    padding: calc(var(--space) * 8) calc(var(--space) * 4);
+    flex-grow: 1;
+}
+
+footer {
+    display: flex;
+    place-content: center;
+    gap: calc(var(--space) * 4);
+
+    background-color: color-mix(in oklab, var(--color-white) 80%, transparent);
+    padding: calc(var(--space) * 4) calc(var(--space) * 4);
+    border-block-start: 1px var(--bg-hard-accent) dashed;
+}
+
+a {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 1.6rem;
+    margin-block-end: var(--space);
+}
+
+h2 {
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin-block-end: var(--space);
+}
+
+a {
+    text-underline-offset: 4px;
+    text-decoration-thickness: 4px;
+    text-decoration-color: var(--underline-color);
+    text-decoration-skip-ink: none;
+
+    &[data-no-underline] {
+        text-decoration: none;
+    }
+}
+
+/*******************************************************************************
+*                                                                              *
+*                               Utility Classes                                *
+*                                                                              *
+*******************************************************************************/
+
+.contact-card {
+    [data-contact-link] {
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: calc(var(--space) * 3);
+        padding: calc(var(--space) * 2);
+
+        &:hover {
+            background-color: var(--card-bg);
+            border-radius: 4px;
+            outline: 1px var(--card-outline-purple) solid;
+        }
+    }
+
+    [data-contact-icon] {
+        background-color: var(--card-bg);
+        color: var(--card-outline);
+
+        width: 40px;
+        height: 40px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border-radius: 9999px;
+        border: 1px var(--card-outline) solid;
+
+        svg {
+            width: 18px;
+        }
+    }
+
+    [data-contact-type] {
+        font-weight: bold;
+        font-size: 0.9rem;
+    }
+
+    [data-contact-data] {
+        font-size: 0.8rem;
+    }
+}
+
+.item-card {
+    display: flex;
+    align-items: center;
+    gap: calc(var(--space) * 3);
+    padding: calc(var(--space) * 2);
+
+    [data-item-icon] {
+        background-color: var(--card-bg);
+        color: var(--card-outline);
+
+        width: 40px;
+        height: 40px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border-radius: 9999px;
+        border: 1px var(--card-outline) solid;
+
+        svg {
+            width: 18px;
+        }
+    }
+
+    [data-item-type] {
+        font-weight: bold;
+        font-size: 0.9rem;
+    }
+
+    [data-item-data] {
+        font-size: 0.8rem;
+    }
+}
+
+ul.display-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: calc(var(--space) * 2);
+}
+
+.tape::after {
+    content: "";
+
+    background-color: color-mix(in oklab, var(--color-black) 15%, transparent);
+    position: absolute;
+    width: var(--tape-width, 50px);
+    height: var(--tape-height, 20px);
+    top: var(--tape-top, unset);
+    bottom: var(--tape-bottom, unset);
+    left: var(--tape-left, unset);
+    right: var(--tape-right, unset);
+    rotate: var(--rotation, 0deg);
+}
+
+.box {
+    background-color: var(--bg-raised);
+    padding: var(--box-padding, calc(var(--space) * 4));
+    box-shadow: var(--box-shadow);
+    border: 2px var(--bg-soft-accent) solid;
+    rotate: var(--rotation, 0deg);
+}
+
+.note {
+    background-color: var(--note-bg, var(--note-bg-yellow));
+}
+
+.spine {
+    border-inline-start: 4px var(--spine-color, var(--spine-red)) solid;
+}
+
+.lined {
+    background-color: var(--color-white);
+    background-image: var(--lined-paper-image);
+    background-size: var(--lined-paper-size);
+}
+
+.stack {
+    display: flex;
+    flex-direction: var(--stack-direction, column);
+    justify-content: flex-start;
+    gap: var(--stack-gap, 1.5rem);
+}
+
+.flex-grow {
+    flex-grow: 1;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.prose {
+    --prose-content-gap: calc(var(--space) * 4);
+    --prose-content-gap-cluster: calc(var(--space) * 2);
+
+    ul {
+        margin-block-start: var(--prose-content-gap);
+        margin-block-end: var(--prose-content-gap-cluster);
+        list-style-type: disc;
+        list-style-position: inside;
+    }
+
+    p {
+        margin-block-start: var(--prose-content-gap);
+        margin-block-end: var(--prose-content-gap-cluster);
+    }
+
+    h1 + ul,
+    h1 + p,
+    h2 + ul,
+    h2 + p {
+        margin-block-start: var(--prose-content-gap-cluster);
+    }
+
+    blockquote {
+        margin-block-start: var(--prose-content-gap);
+        margin-block-end: var(--prose-content-gap-cluster);
+
+        border-inline-start: 8px var(--surface) solid;
+        padding-inline-start: calc(var(--space) * 5);
+        padding-block: calc(var(--space) * 2);
+    }
+
+    .center {
+        text-align: center;
+    }
+
+    time {
+        font-family: var(--font-mono);
+        font-size: 95%;
+    }
+}

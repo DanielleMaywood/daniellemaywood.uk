@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Danielle Maywood's blog">
+    <meta name="author" content="Danielle Maywood">
+    <meta name="color-scheme" content="light dark">
+
+    <link rel="stylesheet" href="/style.css">
+
+    <title>{% block title %}{{ config.title }}{% endblock %}</title>
+
+    {% block head %}
+    {% endblock %}
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <a data-no-underline href="/">
+          <h2 style="--space: none;">danielle's blog</h2>
+        </a>
+        <span class="flex-grow"></span>
+        <a href="/">home</a>
+        <a href="/uses">my stuff</a>
+        <a href="/contact">say hi!</a>
+      </nav>
+    </header>
+
+    <main class="stack">
+      <p class="text-center">⋆｡‧˚ ☾ ⋆˖⁺‧₊◯₊‧⁺˖⋆ ☽ ˚‧｡⋆ </p>
+
+      {% block content %}
+      {% endblock content %}
+
+      <p class="text-center">⋆｡‧˚ ☾ ⋆˖⁺‧₊◯₊‧⁺˖⋆ ☽ ˚‧｡⋆ </p>
+    </main>
+
+    <footer>
+      <div
+          class="box note"
+          style="
+            --rotation: -1deg;
+            --box-padding: calc(var(--space) * 4) calc(var(--space) * 16);
+            --note-bg: var(--note-bg-purple);
+          "
+      >
+        <span class="tape" style="--tape-top: 0px; --tape-left: -15px; --rotation: -40deg;"></span>
+        <span class="tape" style="--tape-bottom: 0px; --tape-right: -15px; --rotation: -40deg;"></span>
+
+        <div class="stack" style="--stack-direction: row;">
+            <a data-no-underline href="https://webring.club/3vsszlhWJcXKoD4M/previous">←</a>
+            <p>Constellation Webring</p>
+            <a data-no-underline href="https://webring.club/3vsszlhWJcXKoD4M/next">→</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

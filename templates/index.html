@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block content %}
+<article class="stack" style="--stack-gap: calc(var(--space) * 12);">
+  <p class="box note" style="--note-bg: var(--note-bg-cyan); --rotation: -1deg;">
+    <span class="tape" style="--tape-top: 0px; --tape-left: -15px; --rotation: -40deg;"></span>
+    <span class="tape" style="--tape-bottom: 0px; --tape-right: -15px; --rotation: -40deg;"></span>
+
+    Hey ^.^, I'm Danielle! I'm a software engineer with a soft spot
+    for the Disney classics. Welcome to my little corner of the
+    internet where I share things I find interesting… I hope you
+    enjoy! ✨
+  </p>
+
+
+  <!--<article class="box lined stack spine" style="--stack-gap: calc(var(--space) * 2);">
+    {% set posts = get_section(path="posts/_index.md") %}
+    <h2>My writing</h2>
+    <ul>
+      {% for page in posts.pages %}
+      <li class="stack" style="--stack-direction: row; --stack-gap: calc(var(--space) * 3);">
+        <span class="box" style="--rotation: -2deg; --box-padding: 0 var(--space);">
+          <time datetime="{{ page.date }}">
+            {{ page.date | date(format="%Y-%m-%d") }}
+          </time>
+        </span>
+
+        <a href="{{ page.permalink | safe }}">{{ page.title }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </article>-->
+
+  <figure class="box note" style="--rotation: 1deg;">
+    <span class="tape" style="--tape-bottom: 0px; --tape-left: -15px; --rotation: 40deg;"></span>
+    <span class="tape" style="--tape-top: 0px; --tape-right: -15px; --rotation: 40deg;"></span>
+
+    <blockquote>
+      If debugging is the process of removing software bugs, then
+      programming must be the process of putting them in.
+    </blockquote>
+    <figcaption>
+        &mdash; <cite>Edsger Dijkstra</cite>
+    </figcaption>
+  </figure>
+</article>
+{% endblock content %}

@@ -1,0 +1,4 @@
+base_url = "https://daniellemaywood.uk"
+title = "Danielle Maywood's blog"
+author = "Danielle Maywood"
+minify_html = true
