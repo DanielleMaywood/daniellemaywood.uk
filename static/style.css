@@ -133,20 +133,25 @@ body {
 }
 
 header {
-    display: flex;
-    place-content: center;
-
     background-color: color-mix(in oklab, var(--bg-raised) 80%, transparent);
-    padding: calc(var(--space) * 4) calc(var(--space) * 4);
     border-block-end: 1px var(--bg-hard-accent) dashed;
+    display: flex;
 
-    nav {
+    div {
+        display: flex;
+        place-content: center;
+        justify-content: space-between;
         max-width: var(--max-width);
+        margin: 0 auto;
         width: 100%;
 
-        display: flex;
-        gap: calc(var(--space) * 3);
-        align-items: center;
+        padding: calc(var(--space) * 4) calc(var(--space) * 4);
+
+        nav {
+            display: flex;
+            gap: calc(var(--space) * 3);
+            align-items: center;
+        }
     }
 }
 
@@ -329,14 +334,6 @@ ul.display-list {
     flex-direction: var(--stack-direction, column);
     justify-content: flex-start;
     gap: var(--stack-gap, 1.5rem);
-}
-
-.flex-grow {
-    flex-grow: 1;
-}
-
-.text-center {
-    text-align: center;
 }
 
 .prose {
